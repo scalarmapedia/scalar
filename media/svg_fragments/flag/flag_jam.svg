@@ -1,0 +1,15 @@
+<g>
+<g>
+	
+		<rect x="2.019" y="23.83" fill="#007C42" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" width="91.963" height="48.34"/>
+	<path fill="#231F20" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" d="M91.963,25.848v44.303H4.037V25.848H91.963
+		 M96,21.812h-4.037H4.037H0v4.037v44.303v4.037h4.037h87.926H96v-4.037V25.848V21.812L96,21.812z"/>
+</g>
+<polyline fill="#231F20" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" points="4.037,28.752 42.237,48.095 
+	4.037,67.242 "/>
+<polyline fill="#231F20" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" points="91.963,28.752 53.568,48.095 
+	91.963,67.242 "/>
+<polyline fill="#F2EA2B" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" points="4.037,25.848 12.539,25.848 
+	47.999,43.89 83.466,25.848 91.963,25.848 91.963,29.83 55.72,48 91.963,65.971 91.963,70.151 83.855,70.151 47.999,51.711 
+	11.951,70.151 4.037,70.151 4.137,65.393 40.48,48 4.037,30.019 "/>
+</g>

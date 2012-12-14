@@ -1,0 +1,11 @@
+<g>
+	<g>
+		<rect x="2.556" y="16.705" fill="#FFFFFF" width="90.889" height="62.591"/>
+		<path fill="#231F20" d="M90.889,19.26v57.48H5.112V19.26H90.889 M96,14.149h-5.111H5.112H0v5.111v57.48v5.111h5.112h85.777H96
+			V76.74V19.26V14.149L96,14.149z"/>
+	</g>
+	<rect x="5.112" y="19.26" fill="#EC7D25" width="85.777" height="19.062"/>
+	<rect x="5.112" y="57.678" fill="#0D9355" width="85.777" height="19.063"/>
+	<circle fill="none" stroke="#2F3881" stroke-width="0.5" stroke-miterlimit="10" cx="47.999" cy="48.005" r="7.866"/>
+	<circle fill="#2F3881" cx="47.999" cy="48.005" r="2.914"/>
+</g>

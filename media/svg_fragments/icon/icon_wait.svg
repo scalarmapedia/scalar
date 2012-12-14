@@ -1,0 +1,16 @@
+<g>
+	<radialGradient id="SVGID_1_" cx="8.125" cy="43.75" r="89.5014" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.4469" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M16.135,43.484C18.332,27.847,31.757,15.813,48,15.813c16.242,0,29.668,12.034,31.864,27.671
+		l7.543-4.418l7.367,4.418C92.501,19.648,72.431,1.005,48,1.005c-24.431,0-44.501,18.643-46.774,42.479l7.612,4.639L16.135,43.484z"
+		/>
+	<radialGradient id="SVGID_2_" cx="87.625" cy="50.75" r="86.2504" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.4493" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<path fill="url(#SVGID_2_)" d="M79.864,52.516C77.668,68.153,64.242,80.187,48,80.187c-16.243,0-29.668-12.033-31.865-27.671
+		l-7.297,4.418l-7.612-4.418C3.499,76.351,23.569,94.995,48,94.995c24.431,0,44.502-18.645,46.774-42.479l-7.122-4.883
+		L79.864,52.516z"/>
+</g>
