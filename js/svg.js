@@ -869,9 +869,9 @@ scalar = (function() {
 		}
 		
 	}
-
 	
-	
+	var iconGallery = function(state) {
+	}
 	
 	// Properties and Methods to expose
 	return {
@@ -883,7 +883,8 @@ scalar = (function() {
 		/** FUNCS */
 		icon:icon, 					// Function to replace an IMG node, with an SVG node
 		toggleFilter:toggleFilter,			// Function the state of a single icon
-		toggleGroupFilters:toggleGroupFilters 		// Function to Toggle whole GROUPS of icons Filter states
+		toggleGroupFilters:toggleGroupFilters, 		// Function to Toggle whole GROUPS of icons Filter states
+		iconGallery:iconGallery				// Function to display all icon fragments
 	}
 	
 })()
