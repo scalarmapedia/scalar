@@ -117,8 +117,8 @@
 
 
 #svgCodeExample {
-	width:			97.5%;
-	height:			1.6rem;
+	width:			95%;
+	height:			1.8rem;
 	
 	color:			white
 	font-size:		.75rem;
@@ -130,7 +130,7 @@
 	
 	padding:		.3em 0 0 0;
 	
-	margin:			.9rem 0 0 0;
+	margin:			.9rem 2.5% 0 2.5%;
 	display:		table;
 }
 
