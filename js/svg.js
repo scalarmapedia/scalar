@@ -73,6 +73,7 @@ scalar = (function() {
 			nameSpaceID	String		Blah
 			initCallback	Function	A function to be called, when all current icon drawing tasks have been complete for 300 ms
 		*/
+
 		
 		//Callback,when no icon creations take place for 300ms or more...
 		if ( !iconsInit.active && initCallback ) {	
@@ -81,7 +82,7 @@ scalar = (function() {
 			iconsInit.callback	= initCallback;
 			
 			iconsInit.checkComplete = function(){
-				//console.log(scalar.iconsInit.counter);
+				console.log(scalar.iconsInit.counter);
 				scalar.iconsInit.counter++;
 				
 				// X ms have passed since last clock reset, do Callback
@@ -92,7 +93,7 @@ scalar = (function() {
 					clearInterval(scalar.iconsInit.interval);
 				}
 			}		
-			iconsInit.interval = setInterval('scalar.iconsInit.checkComplete();',100);
+			iconsInit.interval = setInterval('scalar.iconsInit.checkComplete();',50);
 		}
 		
 		
@@ -412,8 +413,9 @@ scalar = (function() {
 		rt = e.relatedTarget || e.fromElement;
 		et = t;
 		
+		if (!rt) return {state:'in'};
+		
 		for (var i=0; i<100; i++ ) {
-			//console.log(rt);
 	
 			if ( et === rt ) {
 				//console.log('within');
@@ -430,6 +432,8 @@ scalar = (function() {
 	var ext = function(e,t){
 		rt = e.relatedTarget || e.toElement;
 		et = t;
+		
+		if (!rt) return {state:'in'};
 		
 		for (var i=0; i<100; i++ ) {
 			//console.log(rt);
@@ -476,6 +480,7 @@ scalar = (function() {
 			src = t;
 		}
 		
+		if ( !src ) return;
 		/*
 		if( event ) {
 			if ( event.type == 'click' ) {
@@ -870,7 +875,8 @@ scalar = (function() {
 		
 	}
 	
-	var iconGallery = function(state) {
+	var gallery = function() {
+		console.log('Magic!');
 	}
 	
 	// Properties and Methods to expose
@@ -882,9 +888,9 @@ scalar = (function() {
 		
 		/** FUNCS */
 		icon:icon, 					// Function to replace an IMG node, with an SVG node
-		toggleFilter:toggleFilter,			// Function the state of a single icon
-		toggleGroupFilters:toggleGroupFilters, 		// Function to Toggle whole GROUPS of icons Filter states
-		iconGallery:iconGallery				// Function to display all icon fragments
+		toggleFilter:toggleFilter,			// Function Toggle the state of a single icon
+		toggleGroupFilters:toggleGroupFilters, 		// Function Toggle whole GROUPS of icons Filter states, uses toggleFilter
+		gallery:gallery					// Function to display all icon fragments in a window
 	}
 	
 })()

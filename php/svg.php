@@ -65,7 +65,7 @@ if (file_exists($myFile_JS)) {
 
 /** ================================ Write the .js Fragment file, IF it does not exist, or a newer Fragment file is found =================================== */
 if ( !file_exists($myFile_JS) || $newerFragmentsExists ) {
-	echo 'newer files exists';
+	//echo 'newer files exists';
 		// Stamp the SVG code
 	$svg_js  = "\n".'/* ========= WWW SVG GEN =========*/'."\n\n";
 	
@@ -92,9 +92,13 @@ if ( !file_exists($myFile_JS) || $newerFragmentsExists ) {
 	
 	$svg_js .= "\n";	
 	// Write the .js SVG file to disk
+	chmod($myFile_JS,0770); // Open perms
 	$fh = fopen($myFile_JS, 'w') or die("can't open file, please ensure folder owner and perms allow webserver to write to ".$myFile_JS_Folder.' and its contents...');
-	fwrite($fh, $svg_js);
+	fwrite($fh, $svg_js); // Write
 	fclose($fh);
+	chmod($myFile_JS,0400); // Lock down perms
+	
+	
 }
 
 ?>
