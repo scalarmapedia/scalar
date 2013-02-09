@@ -55,8 +55,7 @@ scalar = (function() {
 	// Creates an SVG icon
 	var icon = function( ev, iconID, groupID, icon, f1, nameSpaceID, initCallback ) {
 		
-		/**
-		
+		/**		
 		Function:
  			* To create SVG icons, with Filter effects supplied.
  			* Filter effect can be defined as active or inactive on creation.
@@ -74,6 +73,11 @@ scalar = (function() {
 			initCallback	Function	A function to be called, when all current icon drawing tasks have been complete for 300 ms
 		*/
 
+		//console.log(ev);
+		//console.log(iconID);
+		//console.log(groupID);
+		//console.log(icon);
+		
 		
 		//Callback,when no icon creations take place for 300ms or more...
 		if ( !iconsInit.active && initCallback ) {	
@@ -109,9 +113,10 @@ scalar = (function() {
 
 		// Get the IMG or SVG node to be replaced
 		if ( ev != null ) ev.type != undefined ? img=ev.target : img=ev; 
-		
+
 		// Create the SVG icon container, and give it a unique ID
-		str += scalar.frag['container'].replace("svgIMG",iconID);
+		var container = '<svg version="1.2" id="svgIMG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">';
+		str += container.replace("svgIMG",iconID);
 		
 		/** ============================ Generate SVG with FILTERS, or without ================================
 		
@@ -896,7 +901,7 @@ scalar = (function() {
 			icons += '<galleryCont><icons>';
 			for (var i in scalar.frag ) {
 				console.log(i);
-				icons += '<icon onClick="scalar.showSVGCode(\''+i+'\');"><img src="/scalar/null.png" onLoad="scalar.icon(event,\''+i+'\',\'galleryIcons\',Array(Array(\''+i+'\',0,0,0,1)))"><txt>'+i+'</txt></icon>';
+				icons += '<icon onClick="scalar.showSVGCode(\''+i+'\');"><img src="/scalar/null.png" onLoad="scalar.icon(event,\''+i+'_galleryIcon\',\'galleryIcons\',Array(Array(\''+i+'\',0,0,0,1)))"><txt>'+i+'</txt></icon>';
 			}
 			icons += '</icons></galleryCont><div id="svgCodeExample"></div>';
 			
@@ -912,7 +917,7 @@ scalar = (function() {
 	}
 	
 	var showSVGCode = function(v) {
-		document.getElementById('svgCodeExample').innerText = '<img src="/scalar/null.png" onLoad="scalar.icon(event,\'imgID\',null,[[\''+v+'\',0,0,0,1]])">';
+		document.getElementById('svgCodeExample').innerText = '<img src="/scalar/null.png" onLoad="scalar.icon(event,\''+v+'\',null,[[\''+v+'\',0,0,0,1]])">';
 	}
 	
 	// Properties and Methods to expose
