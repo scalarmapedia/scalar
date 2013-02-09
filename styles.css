@@ -14,7 +14,7 @@
 	
 	background:		hsl(200,15%,58%);
 	
-	padding:		1.5rem .6rem 1.1rem 1.2rem;
+	padding:		2.1rem .6rem 1.1rem 1.2rem;
 		
 	display:		block;
 	float:			left;
@@ -34,7 +34,7 @@
 
 #svgIconGallery galleryCont {
 	width:			100%;
-	height:			80vh;
+	height:			79vh;
 	
 	overflow-x:		hidden;
 	overflow-y:		scroll;
@@ -61,7 +61,7 @@
 	border:			0px dashed blue;
 	border-radius:		.5rem;
 	
-	padding:		.2rem 0 .3rem 0;
+	padding:		.8rem 0 .3rem 0;
 	margin:			0 .2rem .2rem 0;
 	
 	background:		hsla(0,0%,0%,.4);
@@ -69,8 +69,8 @@
 	display:		inline-block;
 }
 #svgIconGallery icon svg {
-	width:			6rem;
-	height:			6rem;
+	width:			5rem;
+	height:			5rem;
 	
 	border:			0px dashed pink;
 	
@@ -93,18 +93,18 @@
 
 
 #svgIconGallery close {
-	width:			1.2rem;
-	height:			1.2rem;
+	width:			1.5rem;
+	height:			1.5rem;
 	
 	position:		absolute;
 	top:			.3rem;
-	right:			.1rem;
+	right:			.3rem;
 	
 	display:		block;
 }
 #svgIconGallery close svg {
-	width:			1rem;
-	height:			1rem;
+	width:			1.5rem;
+	height:			1.5rem;
 	opacity:		.7;
 	display:		block;
 }
@@ -114,6 +114,7 @@
 #svgIconGallery close:active svg {
 	opacity:		.3;
 }
+
 
 
 #svgCodeExample {
@@ -126,13 +127,15 @@
 	
 	border-radius:		.3rem;
 	
-	background:		hsla(200,50%,10%,.4);
+	background:		hsla(200,100%,5%,.5);
 	
 	padding:		.3em 0 0 0;
 	
 	margin:			.9rem 2.5% 0 2.5%;
 	display:		table;
 }
+
+
 
 #svgIconGallery galleryCont::-webkit-scrollbar {
 	width: 				.7rem;

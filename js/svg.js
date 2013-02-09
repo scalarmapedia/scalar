@@ -903,7 +903,7 @@ scalar = (function() {
 				console.log(i);
 				icons += '<icon onClick="scalar.showSVGCode(\''+i+'\');"><img src="/scalar/null.png" onLoad="scalar.icon(event,\''+i+'_galleryIcon\',\'galleryIcons\',Array(Array(\''+i+'\',0,0,0,1)))"><txt>'+i+'</txt></icon>';
 			}
-			icons += '</icons></galleryCont><div id="svgCodeExample"></div>';
+			icons += '</icons></galleryCont><div id="svgCodeExample">Click on any icon, to see a working code example of it here....</div>';
 			
 			n.innerHTML = icons;
 			
