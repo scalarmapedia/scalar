@@ -1,0 +1,155 @@
+
+
+/* ======================================================== SVG ICON GALLERY ===========================================================*/
+
+#svgIconGallery {
+	width:			65vw;
+	height:			auto;
+	
+	position:		absolute;
+	top:			5vh;
+	
+	border:			.15rem solid black;
+	border-radius:		1rem;
+	
+	background:		hsl(200,15%,58%);
+	
+	padding:		1.5rem .6rem 1.1rem 1.2rem;
+		
+	display:		block;
+	float:			left;
+	z-index:		50;
+}
+.svgIconGallery_IN {
+	left:			-100vw;
+	opacity:		0;
+	transition:		left 0ms linear 300ms, opacity 300ms ease-in-out 5ms;
+}
+.svgIconGallery_OUT {
+	left:			17.5vw;
+	opacity:		1;
+	transition:		left 0ms linear 0ms, opacity 300ms ease-in-out 0ms;
+}
+
+
+#svgIconGallery galleryCont {
+	width:			100%;
+	height:			80vh;
+	
+	overflow-x:		hidden;
+	overflow-y:		scroll;
+	
+	padding:		0 .3rem 0 0;
+	
+	border:			0px dashed blue;
+	display:		block;
+}
+
+#svgIconGallery icons {
+	width:			100%;
+	height:			100%;
+	
+	border:			0px dashed yellow;
+	
+	display:		table;
+}
+
+#svgIconGallery icon {
+	width:			7rem;
+	height:			8rem;
+	
+	border:			0px dashed blue;
+	border-radius:		.5rem;
+	
+	padding:		.2rem 0 .3rem 0;
+	margin:			0 .2rem .2rem 0;
+	
+	background:		hsla(0,0%,0%,.4);
+	
+	display:		inline-block;
+}
+#svgIconGallery icon svg {
+	width:			6rem;
+	height:			6rem;
+	
+	border:			0px dashed pink;
+	
+	display:		table;
+}
+
+#svgIconGallery icon txt {
+	width:			100%;
+	height:			1.3em;
+	
+	font-size:		.7rem;
+	
+	border:			0px dashed pink;
+	
+	overflow: 		hidden;
+	text-overflow: 		ellipsis;
+	
+	display:		table;
+}
+
+
+#svgIconGallery close {
+	width:			1.2rem;
+	height:			1.2rem;
+	
+	position:		absolute;
+	top:			.3rem;
+	right:			.1rem;
+	
+	display:		block;
+}
+#svgIconGallery close svg {
+	width:			1rem;
+	height:			1rem;
+	opacity:		.7;
+	display:		block;
+}
+#svgIconGallery close:hover svg {
+	opacity:		1;
+}
+#svgIconGallery close:active svg {
+	opacity:		.3;
+}
+
+
+#svgCodeExample {
+	width:			97.5%;
+	height:			1.6rem;
+	
+	color:			white
+	font-size:		.75rem;
+	line-height:		1.3em;
+	
+	border-radius:		.3rem;
+	
+	background:		hsla(200,50%,10%,.4);
+	
+	padding:		.3em 0 0 0;
+	
+	margin:			.9rem 0 0 0;
+	display:		table;
+}
+
+#svgIconGallery galleryCont::-webkit-scrollbar {
+	width: 				.7rem;
+}
+#svgIconGallery galleryCont::-webkit-scrollbar-track {
+	margin:				0;
+	-webkit-box-shadow: 		inset 0 0 .8rem hsla(210,10%,20%,.6);
+	border-radius: 			.5rem;
+}
+#svgIconGallery galleryCont::-webkit-scrollbar-track {
+	margin:				.6rem .4rem .6rem 0;
+	-webkit-box-shadow: 		inset 0 0 .8rem hsla(210,10%,20%,.6);
+	border-radius: 			.5rem;
+}
+#svgIconGallery galleryCont::-webkit-scrollbar-thumb {
+    	border-radius: 			.5rem;
+    	background:			hsla(200,20%,85%,.8);
+}
+
+
