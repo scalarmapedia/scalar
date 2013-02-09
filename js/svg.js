@@ -875,8 +875,44 @@ scalar = (function() {
 		
 	}
 	
-	var gallery = function() {
-		console.log('Magic!');
+	
+	var gallery = function(e) {
+		
+		scalar.showGallery = function() {
+			if ( document.getElementById('svgIconGallery').className == 'svgIconGallery_IN' ) {
+				$('#svgIconGallery').removeClass('svgIconGallery_IN').addClass('svgIconGallery_OUT');
+			} else {
+				$('#svgIconGallery').removeClass('svgIconGallery_OUT').addClass('svgIconGallery_IN');
+			}
+		}
+		
+		if (!document.getElementById('svgIconGallery')) {
+			
+			var n = document.createElement('div');
+			n.id = 'svgIconGallery';
+			n.className = 'svgIconGallery_IN';
+			
+			var icons = '<close><img src="/scalar/null.png" onClick="scalar.gallery();" onLoad="scalar.icon(event,\'galleryCloseButton\',\'closebutton\',Array(Array(\'icon_closebutton\',0,0,0,1)))"></close>';
+			icons += '<galleryCont><icons>';
+			for (var i in scalar.frag ) {
+				console.log(i);
+				icons += '<icon onClick="scalar.showSVGCode(\''+i+'\');"><img src="/scalar/null.png" onLoad="scalar.icon(event,\''+i+'\',\'galleryIcons\',Array(Array(\''+i+'\',0,0,0,1)))"><txt>'+i+'</txt></icon>';
+			}
+			icons += '</icons></galleryCont><div id="svgCodeExample"></div>';
+			
+			n.innerHTML = icons;
+			
+			//Add Gallery to the docuement
+			document.body.appendChild(n);
+			
+			setTimeout('scalar.showGallery()',50);
+		} else {
+			scalar.showGallery();
+		}
+	}
+	
+	var showSVGCode = function(v) {
+		document.getElementById('svgCodeExample').innerText = '<img src="/scalar/null.png" onLoad="scalar.icon(event,\'imgID\',null,[[\''+v+'\',0,0,0,1]])">';
 	}
 	
 	// Properties and Methods to expose
@@ -890,7 +926,8 @@ scalar = (function() {
 		icon:icon, 					// Function to replace an IMG node, with an SVG node
 		toggleFilter:toggleFilter,			// Function Toggle the state of a single icon
 		toggleGroupFilters:toggleGroupFilters, 		// Function Toggle whole GROUPS of icons Filter states, uses toggleFilter
-		gallery:gallery					// Function to display all icon fragments in a window
+		gallery:gallery,				// Function to display all icon fragments in a window
+		showSVGCode:showSVGCode				// Function display SVG creation code
 	}
 	
 })()
